@@ -19,7 +19,8 @@
 		},
 		data() {
 			return {
-				title: 'Hello'
+				title: 'Hello',
+				visible: true
 			}
 		},
 		computed: {
