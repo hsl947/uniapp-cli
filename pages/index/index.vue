@@ -4,6 +4,7 @@
 		<view class="text-area">
 			<text class="title">{{title}} - {{num}}</text>
 		</view>
+		<view class="text-area" @click="setTabbar">点击改变tabbar</view>
 		<w-picker :visible.sync="visible" mode="region" :current="true"></w-picker>
 	</view>
 </template>
@@ -53,6 +54,20 @@
 			},
 			testStorage () {
 				this.$storage.setStorageSync('test', '1234')
+			},
+			setTabbar () {
+				uni.setTabBarItem({
+				  index: 0,
+				  text: '招人才',
+				  iconPath: 'static/logo.png',
+				  selectedIconPath: 'static/logo.png'
+				})
+				uni.setTabBarItem({
+				  index: 1,
+				  text: '职位管理',
+				  iconPath: 'static/logo.png',
+				  selectedIconPath: 'static/logo.png'
+				})
 			}
 		}
 	}
