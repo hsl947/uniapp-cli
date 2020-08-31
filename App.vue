@@ -9,6 +9,7 @@
 		onHide: function() {
 			console.log('App Hide')
 		},
+		// 全局数据，通过 getApp().globalData.test 可访问
 		globalData: {
 			test: 'globalData-test'
 		}

@@ -1,11 +1,8 @@
 <template>
 	<view class="content">
-		<image class="logo" src="/static/logo.png"></image>
-		<view class="text-area">
-			<text class="title">{{title}} - {{num}}</text>
-		</view>
-		<view class="text-area" @click="setTabbar">点击改变tabbar</view>
-		<w-picker :visible.sync="visible" mode="region" :current="true"></w-picker>
+		<navigator url="/pages/demo/index" hover-class="navigator-hover" style="margin-top: 300rpx;">
+				<button type="default">跳转到demo页面</button>
+		</navigator>
 	</view>
 </template>
 

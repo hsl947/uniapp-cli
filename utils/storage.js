@@ -1,3 +1,7 @@
+/**
+ * 封装本地存储方法
+ * this.$storage.setStorageSync(key, value)
+ **/
 const storage = {
 	setStorageSync(key, val) {
 		uni.setStorageSync(key, val);

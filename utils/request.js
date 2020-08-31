@@ -1,3 +1,8 @@
+/**
+ * 封装请求方法
+ * this.$request.get(url, params)
+ * this.$request.post(url, params)
+ **/
 const fetch = (method, url, params = {}) => {
 	return new Promise((resolve, reject) => {
 		uni.request({
