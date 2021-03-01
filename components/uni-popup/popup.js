@@ -12,14 +12,14 @@ const config = {
   // 对话框
   dialog: 'center',
   // 分享
-  share: 'bottom',
+  share: 'bottom'
 }
 
 export default {
   data() {
     return {
-      config: config,
+      config: config
     }
   },
-  mixins: [message],
+  mixins: [message]
 }

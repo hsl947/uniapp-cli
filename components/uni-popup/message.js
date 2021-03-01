@@ -17,6 +17,6 @@ export default {
       if (this.childrenMsg) {
         this.childrenMsg.close()
       }
-    },
-  },
+    }
+  }
 }

@@ -50,29 +50,29 @@ import popup from './popup.js'
 export default {
   name: 'UniPopup',
   components: {
-    uniTransition,
+    uniTransition
   },
   props: {
     // 开启动画
     animation: {
       type: Boolean,
-      default: true,
+      default: true
     },
     // 弹出层类型，可选值，top: 顶部弹出层；bottom：底部弹出层；center：全屏弹出层
     // message: 消息提示 ; dialog : 对话框
     type: {
       type: String,
-      default: 'center',
+      default: 'center'
     },
     // maskClick
     maskClick: {
       type: Boolean,
-      default: true,
-    },
+      default: true
+    }
   },
   provide() {
     return {
-      popup: this,
+      popup: this
     }
   },
   mixins: [popup],
@@ -84,7 +84,7 @@ export default {
       handler: function (newVal) {
         this[this.config[newVal]]()
       },
-      immediate: true,
+      immediate: true
     },
     /**
      * 监听遮罩是否可点击
@@ -92,7 +92,7 @@ export default {
      */
     maskClick(val) {
       this.mkclick = val
-    },
+    }
   },
   data() {
     return {
@@ -106,16 +106,16 @@ export default {
         top: 0,
         left: 0,
         right: 0,
-        backgroundColor: 'rgba(0, 0, 0, 0.4)',
+        backgroundColor: 'rgba(0, 0, 0, 0.4)'
       },
       transClass: {
         position: 'fixed',
         left: 0,
-        right: 0,
+        right: 0
       },
       maskShow: true,
       mkclick: true,
-      popupstyle: 'top',
+      popupstyle: 'top'
     }
   },
   created() {
@@ -143,7 +143,7 @@ export default {
               resolve()
             })
           }, 50)
-        }).then((res) => {
+        }).then(() => {
           // 自定义打开事件
           clearTimeout(this.msgtimer)
           this.msgtimer = setTimeout(() => {
@@ -151,17 +151,17 @@ export default {
           }, 100)
           this.$emit('change', {
             show: true,
-            type: this.type,
+            type: this.type
           })
         })
       })
     },
-    close(type) {
+    close() {
       this.showTrans = false
       this.$nextTick(() => {
         this.$emit('change', {
           show: false,
-          type: this.type,
+          type: this.type
         })
         clearTimeout(this.timer)
         // 自定义关闭事件
@@ -185,7 +185,7 @@ export default {
         position: 'fixed',
         top: 0,
         left: 0,
-        right: 0,
+        right: 0
       }
     },
     /**
@@ -198,7 +198,7 @@ export default {
         position: 'fixed',
         left: 0,
         right: 0,
-        bottom: 0,
+        bottom: 0
       }
     },
     /**
@@ -218,10 +218,10 @@ export default {
         right: 0,
         top: 0,
         justifyContent: 'center',
-        alignItems: 'center',
+        alignItems: 'center'
       }
-    },
-  },
+    }
+  }
 }
 </script>
 <style lang="scss" scoped>

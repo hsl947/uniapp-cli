@@ -17,34 +17,34 @@ export default {
   props: {
     mode: {
       type: String,
-      default: 'day',
+      default: 'day'
     },
     value: {
       type: String,
-      default: '',
+      default: ''
     },
     start: {
       type: String,
-      default: '1970-01-01',
+      default: '1970-01-01'
     },
     end: {
       type: String,
-      default: '2099-12-30',
+      default: '2099-12-30'
     },
     seperator: {
       type: String,
-      default: '-',
-    },
+      default: '-'
+    }
   },
   components: {},
   data() {
     return {
-      date: this.value || this.getDate(),
+      date: this.value || this.getDate()
     }
   },
   created() {},
   methods: {
-    getDate(type) {
+    getDate() {
       const date = new Date()
 
       const year = date.getFullYear()
@@ -57,7 +57,7 @@ export default {
       const viewText = {
         year: `${year}`,
         month: `${year}${this.seperator}${month}`,
-        day: `${year}${this.seperator}${month}${this.seperator}${day}`,
+        day: `${year}${this.seperator}${month}${this.seperator}${day}`
       }
 
       return viewText[this.mode]
@@ -65,8 +65,8 @@ export default {
     onDateChange(e) {
       this.date = e.detail.value
       this.$emit('onDateChange', this.date)
-    },
-  },
+    }
+  }
 }
 </script>
 

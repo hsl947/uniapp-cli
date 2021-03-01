@@ -16,21 +16,21 @@ export default {
   props: {
     value: {
       type: String,
-      default: '',
+      default: ''
     },
     start: {
       type: String,
-      default: '00:00',
+      default: '00:00'
     },
     end: {
       type: String,
-      default: '23:59',
-    },
+      default: '23:59'
+    }
   },
   components: {},
   data() {
     return {
-      time: this.value || this.getTime(),
+      time: this.value || this.getTime()
     }
   },
   created() {},
@@ -49,8 +49,8 @@ export default {
     onTimeChange(e) {
       this.time = e.detail.value
       this.$emit('onTimeChange', this.time)
-    },
-  },
+    }
+  }
 }
 </script>
 

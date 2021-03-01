@@ -15,7 +15,7 @@ const fetch = (method, url, params = {}) => {
       },
       fail(err) {
         reject(err)
-      },
+      }
     })
   })
 }
@@ -26,7 +26,7 @@ const request = {
   },
   post: function () {
     return fetch('post', ...arguments)
-  },
+  }
 }
 
 export default request

@@ -30,22 +30,22 @@ export default {
      */
     type: {
       type: String,
-      default: 'success',
+      default: 'success'
     },
     /**
      * 消息文字
      */
     message: {
       type: String,
-      default: '',
+      default: ''
     },
     /**
      * 显示时间，设置为 0 则不会自动关闭
      */
     duration: {
       type: Number,
-      default: 3000,
-    },
+      default: 3000
+    }
   },
   inject: ['popup'],
   data() {
@@ -64,8 +64,8 @@ export default {
     },
     close() {
       clearTimeout(this.popuptimer)
-    },
-  },
+    }
+  }
 }
 </script>
 <style lang="scss" scoped>

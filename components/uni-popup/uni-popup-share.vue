@@ -32,8 +32,8 @@ export default {
   props: {
     title: {
       type: String,
-      default: '分享到',
-    },
+      default: '分享到'
+    }
   },
   inject: ['popup'],
   data() {
@@ -42,34 +42,34 @@ export default {
         {
           text: '微信',
           icon: 'https://img-cdn-qiniu.dcloud.net.cn/uni-ui/grid-2.png',
-          name: 'wx',
+          name: 'wx'
         },
         {
           text: '支付宝',
           icon: 'https://img-cdn-qiniu.dcloud.net.cn/uni-ui/grid-8.png',
-          name: 'wx',
+          name: 'wx'
         },
         {
           text: 'QQ',
           icon: 'https://img-cdn-qiniu.dcloud.net.cn/uni-ui/gird-3.png',
-          name: 'qq',
+          name: 'qq'
         },
         {
           text: '新浪',
           icon: 'https://img-cdn-qiniu.dcloud.net.cn/uni-ui/grid-1.png',
-          name: 'sina',
+          name: 'sina'
         },
         {
           text: '百度',
           icon: 'https://img-cdn-qiniu.dcloud.net.cn/uni-ui/grid-7.png',
-          name: 'copy',
+          name: 'copy'
         },
         {
           text: '其他',
           icon: 'https://img-cdn-qiniu.dcloud.net.cn/uni-ui/grid-5.png',
-          name: 'more',
-        },
-      ],
+          name: 'more'
+        }
+      ]
     }
   },
   created() {},
@@ -82,7 +82,7 @@ export default {
         'select',
         {
           item,
-          index,
+          index
         },
         () => {
           this.popup.close()
@@ -94,8 +94,8 @@ export default {
      */
     close() {
       this.popup.close()
-    },
-  },
+    }
+  }
 }
 </script>
 <style lang="scss" scoped>

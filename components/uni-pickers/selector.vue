@@ -15,21 +15,21 @@ export default {
   props: {
     dataArray: {
       type: Array,
-      default: () => [],
+      default: () => []
     },
     value: {
       type: Number,
-      default: 0,
+      default: 0
     },
     name: {
       type: String,
-      default: 'name',
-    },
+      default: 'name'
+    }
   },
   components: {},
   data() {
     return {
-      index: this.value,
+      index: this.value
     }
   },
   created() {},
@@ -37,8 +37,8 @@ export default {
     onPickerChange(e) {
       this.index = +e.detail.value
       this.$emit('onPickerChange', this.index)
-    },
-  },
+    }
+  }
 }
 </script>
 

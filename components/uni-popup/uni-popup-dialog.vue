@@ -57,53 +57,53 @@ export default {
   props: {
     value: {
       type: [String, Number],
-      default: '',
+      default: ''
     },
     placeholder: {
       type: [String, Number],
-      default: '请输入内容',
+      default: '请输入内容'
     },
     /**
      * 对话框主题 success/warning/info/error	  默认 success
      */
     type: {
       type: String,
-      default: 'error',
+      default: 'error'
     },
     /**
      * 对话框模式 base/input
      */
     mode: {
       type: String,
-      default: 'base',
+      default: 'base'
     },
     /**
      * 对话框标题
      */
     title: {
       type: String,
-      default: '提示',
+      default: '提示'
     },
     /**
      * 对话框内容
      */
     content: {
       type: String,
-      default: '',
+      default: ''
     },
     /**
      * 拦截取消事件 ，如果拦截取消事件，必须监听close事件，执行 done()
      */
     beforeClose: {
       type: Boolean,
-      default: false,
-    },
+      default: false
+    }
   },
   data() {
     return {
       dialogType: 'error',
       focus: false,
-      val: '',
+      val: ''
     }
   },
   inject: ['popup'],
@@ -118,7 +118,7 @@ export default {
     },
     value(val) {
       this.val = val
-    },
+    }
   },
   created() {
     // 对话框遮罩不可点击
@@ -158,8 +158,8 @@ export default {
         return
       }
       this.popup.close()
-    },
-  },
+    }
+  }
 }
 </script>
 

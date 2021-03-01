@@ -14,7 +14,7 @@ const storage = {
   },
   clearStorageSync() {
     uni.clearStorageSync()
-  },
+  }
 }
 
 export default storage

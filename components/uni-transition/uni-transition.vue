@@ -36,30 +36,30 @@ export default {
   props: {
     show: {
       type: Boolean,
-      default: false,
+      default: false
     },
     modeClass: {
       type: Array,
       default() {
         return []
-      },
+      }
     },
     duration: {
       type: Number,
-      default: 300,
+      default: 300
     },
     styles: {
       type: Object,
       default() {
         return {}
-      },
-    },
+      }
+    }
   },
   data() {
     return {
       isShow: false,
       transform: '',
-      ani: { in: '', active: '' },
+      ani: { in: '', active: '' }
     }
   },
   watch: {
@@ -71,14 +71,14 @@ export default {
           this.close()
         }
       },
-      immediate: true,
-    },
+      immediate: true
+    }
   },
   computed: {
     stylesObject() {
       const styles = {
         ...this.styles,
-        'transition-duration': this.duration / 1000 + 's',
+        'transition-duration': this.duration / 1000 + 's'
       }
       let transfrom = ''
       for (const i in styles) {
@@ -86,7 +86,7 @@ export default {
         transfrom += line + ':' + styles[i] + ';'
       }
       return transfrom
-    },
+    }
   },
   created() {
     // this.timer = null
@@ -99,7 +99,7 @@ export default {
   methods: {
     change() {
       this.$emit('click', {
-        detail: this.isShow,
+        detail: this.isShow
       })
     },
     open() {
@@ -120,7 +120,7 @@ export default {
         }, 50)
       })
     },
-    close(type) {
+    close() {
       clearTimeout(this.timer)
       this._animation(false)
     },
@@ -135,14 +135,14 @@ export default {
           duration: this.duration, //ms
           timingFunction: 'ease',
           needLayout: false,
-          delay: 0, //ms
+          delay: 0 //ms
         },
         () => {
           if (!type) {
             this.isShow = false
           }
           this.$emit('change', {
-            detail: this.isShow,
+            detail: this.isShow
           })
         }
       )
@@ -161,14 +161,14 @@ export default {
           this.isShow = false
         }
         this.$emit('change', {
-          detail: this.isShow,
+          detail: this.isShow
         })
       }, this.duration)
       // #endif
     },
     getTranfrom(type) {
       const styles = {
-        transform: '',
+        transform: ''
       }
       this.modeClass.forEach((mode) => {
         switch (mode) {
@@ -215,8 +215,8 @@ export default {
     // },
     toLine(name) {
       return name.replace(/([A-Z])/g, '-$1').toLowerCase()
-    },
-  },
+    }
+  }
 }
 </script>
 

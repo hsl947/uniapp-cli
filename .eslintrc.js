@@ -2,28 +2,26 @@ module.exports = {
   root: true,
   env: {
     browser: true,
-    node: true,
+    node: true
   },
   parserOptions: {
     ecmaVersion: 2018,
-    sourceType: 'module',
+    sourceType: 'module'
   },
   extends: [
     'eslint:recommended',
     'plugin:vue/essential',
     'prettier',
-    'plugin:prettier/recommended',
+    'plugin:prettier/recommended'
   ],
   globals: {
     uni: 'readonly',
     wx: 'readonly',
-    getApp: 'readonly',
+    getApp: 'readonly'
   },
   plugins: ['prettier'],
   // add your custom rules here
   rules: {
-    'prettier/prettier': 'error',
-    'vue/max-attributes-per-line': 'off',
     'nuxt/no-cjs-in-config': 'off',
     'generator-star-spacing': 'off',
     'no-mixed-operators': 0,
@@ -44,15 +42,16 @@ module.exports = {
       'single',
       {
         avoidEscape: true,
-        allowTemplateLiterals: true,
-      },
+        allowTemplateLiterals: true
+      }
     ],
     'no-delete-var': 2,
     'prefer-const': [
       2,
       {
-        ignoreReadBeforeAssign: false,
-      },
+        ignoreReadBeforeAssign: false
+      }
     ],
-  },
+    'comma-dangle': ['error', 'never']
+  }
 }

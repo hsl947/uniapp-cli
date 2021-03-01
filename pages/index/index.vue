@@ -17,13 +17,13 @@ export default {
   data() {
     return {
       title: 'Hello',
-      visible: true,
+      visible: true
     }
   },
   computed: {
     ...mapState({
-      num: (state) => state.num,
-    }),
+      num: (state) => state.num
+    })
   },
   onLoad() {
     // 测试功能
@@ -50,22 +50,8 @@ export default {
     },
     testStorage() {
       this.$storage.setStorageSync('test', '1234')
-    },
-    setTabbar() {
-      uni.setTabBarItem({
-        index: 0,
-        text: '招人才',
-        iconPath: 'static/logo.png',
-        selectedIconPath: 'static/logo.png',
-      })
-      uni.setTabBarItem({
-        index: 1,
-        text: '职位管理',
-        iconPath: 'static/logo.png',
-        selectedIconPath: 'static/logo.png',
-      })
-    },
-  },
+    }
+  }
 }
 </script>
 

@@ -1,19 +1,26 @@
 {
   "scripts": {
     "eslint": "eslint --init",
-    "lint": "eslint --fix --ext .js,.vue components pages store utils"
+    "test": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "lint:fix": "eslint --fix --ext .js,.vue --ignore-path .gitignore .",
+    "prepare": "husky install"
   },
-  "devDependencies": {
+  "dependencies": {
     "@dcloudio/uni-helper-json": "^1.0.5",
     "@types/html5plus": "^1.0.1",
     "@types/uni-app": "^1.4.3",
     "eslint": "^7.10.0",
-    "eslint-plugin-vue": "^6.2.2"
-  },
-  "dependencies": {
     "eslint-config-prettier": "^6.12.0",
     "eslint-plugin-html": "^6.1.0",
     "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-vue": "^6.2.2",
+    "husky": "^5.1.2",
+    "lint-staged": "^10.5.4",
     "prettier": "^2.1.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm test"
+    }
   }
 }

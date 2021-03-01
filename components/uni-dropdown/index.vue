@@ -31,7 +31,7 @@
         class="sub-menu-class"
         :class="{
           show: showPage == page_index,
-          hide: pageState[page_index] != true,
+          hide: pageState[page_index] != true
         }"
       >
         <block v-if="page.type == 'hierarchy' && page.submenu.length > 0">
@@ -104,7 +104,7 @@
                         :class="{
                           on:
                             activeMenuArr[page_index][1] == second_index &&
-                            activeMenuArr[page_index][2] == sub2_index,
+                            activeMenuArr[page_index][2] == sub2_index
                         }"
                         @tap="
                           selectHierarchyMenu(
@@ -189,6 +189,7 @@
   </view>
 </template>
 <script>
+/* eslint-disable */
 export default {
   data() {
     return {

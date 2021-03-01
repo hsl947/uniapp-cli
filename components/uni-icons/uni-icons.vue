@@ -8,6 +8,7 @@
 </template>
 
 <script>
+/* eslint-disable */
 import icons from './icons.js'
 // #ifdef APP-NVUE
 var domModule = weex.requireModule('dom')
