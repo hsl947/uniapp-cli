@@ -1,6 +1,7 @@
 <template>
   <view class="content">
     <image class="logo" src="/static/logo.png"></image>
+    <van-button type="primary">按钮</van-button>
     <view class="text-area">
       <text class="title">{{ title }} - {{ num }}</text>
     </view>

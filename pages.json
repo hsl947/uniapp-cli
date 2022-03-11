@@ -8,7 +8,10 @@
 		},{
 			"path": "pages/demo/index",
 			"style": {
-				"navigationBarTitleText": "uni-app demo"
+				"navigationBarTitleText": "uni-app demo",
+				"usingComponents": {
+					"van-button": "/wxcomponents/vant/button/index"
+				}
 			}
 		}
 	],
