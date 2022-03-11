@@ -17,10 +17,5 @@
     "husky": "^5.1.2",
     "lint-staged": "^10.5.4",
     "prettier": "^2.1.2"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm test"
-    }
   }
 }
